@@ -1,0 +1,84 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   color: white;
+}
+
+.main-container {
+   display: grid;
+   height: 100vh;
+   background-color: #0e0f13;
+   grid-template-columns: 0.5fr 2fr;
+   grid-template-rows: 0.5fr 5fr;
+   grid-template-areas:
+      "aside header"
+      "aside imgs";
+}
+
+.header {
+   grid-area: header;
+   display: flex;
+   align-items: center;
+   background-color: #111717;
+}
+.header > p {
+   margin: 17px;
+   padding: 5px;
+}
+.header > p:hover {
+   border-radius: 5px;
+   background-color: #016b94;
+   cursor: pointer;
+}
+.aside {
+   grid-area: aside;
+   margin: 0px 20px;
+   color: rgb(122, 116, 116);
+}
+.aside > p:hover,
+.aside > h4:hover,
+i:hover {
+   color: #016b94;
+}
+
+.aside > div,
+p {
+   margin-bottom: 15px;
+}
+.imgsdiv {
+   grid-area: imgs;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+}
+.sideimgsdiv {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   gap: 5px 5px;
+   margin: 10px 0px 10px;
+}
+
+.img1 {
+   width: 200px;
+   padding-top: 50px;
+   padding-bottom: 50px;
+}
+.imgsdiv > img {
+   width: 270px;
+   height: 210px;
+}
+
+.imgsdiv > img:hover {
+   transform: scale(1.1);
+}
+
+.sideimgsdiv > img {
+   width: 65px;
+   height: 50px;
+}
+.sideimgsdiv > img:hover {
+   transform: scale(1.3);
+   cursor: pointer;
+}
